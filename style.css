@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(DJI\ Drone\ Website\ \ Assets/BG.jpg) center top / cover no-repeat;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  height: 80px;
+  margin-top: 0.5rem;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+    animation: dtu 0.5s ease  forwards;
+}
+
+nav img {
+  width: clamp(50px, 5vw, 70px);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+    max-height: 50PX;
+
+ 
+}
+.nav-links li{
+    /* background-color: red; */
+    padding: 0px 1.1rem;
+    height: 100%;
+    
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.nav-icon i {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  padding: 0.9rem;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.hero-section {
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 70px;
+  /* margin-top: 10rem; */
+  text-align: center;
+}
+
+.hero-section img {
+  width: clamp(300px, 70%, 700px);
+  position: absolute;
+  /* top: -60px; */
+  transform: translateY(12%);
+  object-fit: cover;
+  z-index: 10;
+  transition: transform 0.5s ease;
+  /* animation for flying */
+animation: 
+dtu 0.5s ease 0s 1 forwards,
+  drone 2s ease 0.5S  infinite;  /* name duration timing-function delay iteration */
+
+
+}
+
+.hero-section h4 {
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 500;
+  margin-top: 5rem;
+  margin-bottom: 5.8rem;
+  font-size: clamp(1rem, 12vw, 1.5rem);
+  z-index: 5;
+  animation: dtu 0.5s ease 0s 1 forwards;
+}
+
+.hero-section h1 {
+  color: transparent;
+  background: linear-gradient(white, rgba(0, 0, 0, 0.1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 500;
+  font-size: clamp(10rem,20vw, 15rem);
+  font-family: 'Anton', sans-serif;
+  margin-top: -7rem;
+  z-index: 2;
+  animation: dtu 0.5s ease 0s 1 forwards;
+}
+
+.card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+  margin-top: 10rem;
+  z-index: 999;
+    animation: dtu 0.5s ease  forwards;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.card i {
+  font-size: 1.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.title-card {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0 3rem;
+  color: rgba(255, 255, 255, 0.781);
+  text-align: center;
+}
+
+.title-card button {
+  padding: 0.5rem 1.3rem;
+  border-radius: 5px;
+  font-weight: 900;
+  border: none;
+  color: rgba(0, 0, 0, 0.644);
+  cursor: pointer;
+}
+
+.title-card button:hover {
+  cursor: pointer;
+}
+
+
+/* animations */
+@keyframes drone {
+    0%,100%{
+        transform: translateY(0%);
+
+    }
+    40%,60%{
+
+        transform: translateY(20%);
+        
+    }
+    
+}
+
+
+@keyframes dtu{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+    
+}
+
+/* hover effect */
+.nav-links li:hover a,
+.nav-icon A:hover I {
+  color: #26d5db;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.title-card button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
